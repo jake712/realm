@@ -12,9 +12,7 @@ echo -e "nameserver 1.1.1.1\nnameserver 8.8.8.8" > /etc/resolv.conf
 cat /etc/resolv.conf
 ping 1.1.1.1 -c 1
 
-cd /tmp
-rm -rf realm.tar.gz realm realm-install
-mkdir realm-install && cd realm-install
+
 
 curl -L --resolve github.com:443:140.82.121.4 -o realm.tar.gz https://github.com/zhboner/realm/releases/download/v2.7.0/realm-x86_64-unknown-linux-musl.tar.gz
 
